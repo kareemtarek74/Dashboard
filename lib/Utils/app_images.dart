@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class Assets {
   Assets._();
-  
+
   /// Assets for assetsImagesAccount1
   /// lib/Assets/images/account1.svg
   static const String assetsImagesAccount1 = "lib/Assets/images/account1.svg";
@@ -10,9 +10,24 @@ class Assets {
   /// lib/Assets/images/account2.svg
   static const String assetsImagesAccount2 = "lib/Assets/images/account2.svg";
 
+  /// Assets for assetsImagesArrowDown
+  /// lib/Assets/images/arrow_down.svg
+  static const String assetsImagesArrowDown =
+      "lib/Assets/images/arrow_down.svg";
+
+  /// Assets for assetsImagesArrowRight
+  /// lib/Assets/images/arrow-right.svg
+  static const String assetsImagesArrowRight =
+      "lib/Assets/images/arrow-right.svg";
+
+  /// Assets for assetsImagesArrowRightWight
+  /// lib/Assets/images/arrow-right_wight.svg
+  static const String assetsImagesArrowRightWight =
+      "lib/Assets/images/arrow-right_wight.svg";
+
   /// Assets for assetsImagesBalance
-  /// lib/Assets/images/balance.svg
-  static const String assetsImagesBalance = "lib/Assets/images/balance.svg";
+  /// lib/Assets/images/Balance.svg
+  static const String assetsImagesBalance = "lib/Assets/images/Balance.svg";
 
   /// Assets for assetsImagesCard
   /// lib/Assets/images/card.svg
@@ -32,7 +47,8 @@ class Assets {
 
   /// Assets for assetsImagesInvestments
   /// lib/Assets/images/investments.svg
-  static const String assetsImagesInvestments = "lib/Assets/images/investments.svg";
+  static const String assetsImagesInvestments =
+      "lib/Assets/images/investments.svg";
 
   /// Assets for assetsImagesLogout
   /// lib/Assets/images/logout.svg
@@ -40,7 +56,8 @@ class Assets {
 
   /// Assets for assetsImagesPersonalIcon
   /// lib/Assets/images/Personal_Icon.svg
-  static const String assetsImagesPersonalIcon = "lib/Assets/images/Personal_Icon.svg";
+  static const String assetsImagesPersonalIcon =
+      "lib/Assets/images/Personal_Icon.svg";
 
   /// Assets for assetsImagesSetting
   /// lib/Assets/images/setting.svg
@@ -48,14 +65,15 @@ class Assets {
 
   /// Assets for assetsImagesStatistics
   /// lib/Assets/images/statistics.svg
-  static const String assetsImagesStatistics = "lib/Assets/images/statistics.svg";
+  static const String assetsImagesStatistics =
+      "lib/Assets/images/statistics.svg";
 
   /// Assets for assetsImagesTransaction
   /// lib/Assets/images/transaction.svg
-  static const String assetsImagesTransaction = "lib/Assets/images/transaction.svg";
+  static const String assetsImagesTransaction =
+      "lib/Assets/images/transaction.svg";
 
   /// Assets for assetsImagesWallet
   /// lib/Assets/images/wallet.svg
   static const String assetsImagesWallet = "lib/Assets/images/wallet.svg";
 }
-

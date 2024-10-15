@@ -31,7 +31,7 @@ class CustomDrawer extends StatelessWidget {
         SliverFillRemaining(
           hasScrollBody: false,
           child: Padding(
-            padding: EdgeInsets.all(12),
+            padding: EdgeInsets.all(8),
             child: Column(
               children: [
                 Expanded(

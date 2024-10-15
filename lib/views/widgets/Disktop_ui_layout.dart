@@ -1,6 +1,8 @@
 import 'package:dashboard/views/widgets/all_expenses.dart';
 import 'package:dashboard/views/widgets/custom_drawer.dart';
+import 'package:dashboard/views/widgets/quick_invoice.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class DisktopUiLayout extends StatelessWidget {
   const DisktopUiLayout({super.key});
@@ -16,7 +18,13 @@ class DisktopUiLayout extends StatelessWidget {
         Expanded(
             flex: 2,
             child: Column(
-              children: [Expanded(child: AllExpenses())],
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 20),
+                  child: AllExpenses(),
+                ),
+                QuickInvoice()
+              ],
             ))
       ],
     );
