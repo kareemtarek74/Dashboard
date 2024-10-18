@@ -17,14 +17,19 @@ class DisktopUiLayout extends StatelessWidget {
         SizedBox(width: 32),
         Expanded(
             flex: 2,
-            child: Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20),
-                  child: AllExpenses(),
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 40),
+                child: Column(
+                  children: [
+                    AllExpenses(),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    QuickInvoice()
+                  ],
                 ),
-                QuickInvoice()
-              ],
+              ),
             ))
       ],
     );
