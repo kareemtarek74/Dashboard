@@ -19,10 +19,12 @@ class PersonalInfoListile extends StatelessWidget {
         child: ListTile(
           leading: SvgPicture.asset(userModel.icon),
           title: Text(
+            maxLines: 1,
             userModel.title,
             style: Styles.styleSemiBold16,
           ),
           subtitle: Text(
+            maxLines: 1,
             userModel.subtitle,
             style: Styles.styleRegular12,
           ),

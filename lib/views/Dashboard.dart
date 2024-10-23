@@ -1,5 +1,7 @@
 import 'package:dashboard/views/widgets/Adaptive_ui_widget.dart';
 import 'package:dashboard/views/widgets/Disktop_ui_layout.dart';
+import 'package:dashboard/views/widgets/mobile_ui_layout.dart';
+import 'package:dashboard/views/widgets/tablet_ui_layout.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
@@ -10,8 +12,8 @@ class Dashboard extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xffF7F9FA),
       body: AdaptiveUi(
-        mobileLayout: (context) => const SizedBox(),
-        tabletLayout: (context) => const SizedBox(),
+        mobileLayout: (context) => const MobileUiLayout(),
+        tabletLayout: (context) => const TabletUiLayout(),
         disktopLayout: (context) => const DisktopUiLayout(),
       ),
     );
