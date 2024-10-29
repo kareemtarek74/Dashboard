@@ -26,7 +26,11 @@ class LatestTransactionListview extends StatelessWidget {
       child: Row(
         children: user
             .map(
-              (e) => IntrinsicWidth(child: PersonalInfoListile(userModel: e)),
+              (e) => IntrinsicWidth(
+                  child: PersonalInfoListile(
+                userModel: e,
+                cardColor: const Color(0xffFAFAFA),
+              )),
             )
             .toList(),
       ),

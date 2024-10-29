@@ -27,6 +27,7 @@ class TransactionHistoryListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      physics: const ScrollPhysics(parent: NeverScrollableScrollPhysics()),
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
       itemCount: transactionItemsList.length,

@@ -5,12 +5,13 @@ import 'package:flutter/material.dart';
 class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
   const AllExpensesAndQuickInvoiceSection({
     super.key,
+    this.topPadding,
   });
-
+  final EdgeInsetsGeometry? topPadding;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 40),
+      padding: topPadding ?? EdgeInsets.zero,
       child: const SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.only(bottom: 40),

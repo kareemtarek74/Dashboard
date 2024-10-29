@@ -1,8 +1,10 @@
 import 'package:dashboard/views/Dashboard.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const DashboardApp());
+  runApp(DevicePreview(
+      enabled: false, builder: (context) => const DashboardApp()));
 }
 
 class DashboardApp extends StatelessWidget {
@@ -10,9 +12,11 @@ class DashboardApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: Dashboard(),
+      home: const Dashboard(),
     );
   }
 }

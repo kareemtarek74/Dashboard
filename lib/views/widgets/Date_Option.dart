@@ -17,9 +17,9 @@ class DateOption extends StatelessWidget {
           border: Border.all(color: const Color(0xffF1F1F1), width: 1)),
       child: Row(
         children: [
-          const Text(
+          Text(
             'Monthly',
-            style: Styles.styleMedium16,
+            style: Styles.styleMedium16(context),
           ),
           const SizedBox(
             width: 18,

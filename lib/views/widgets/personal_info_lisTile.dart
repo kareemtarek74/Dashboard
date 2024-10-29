@@ -7,26 +7,36 @@ class PersonalInfoListile extends StatelessWidget {
   const PersonalInfoListile({
     super.key,
     required this.userModel,
+    required this.cardColor,
   });
   final UserInfoModel userModel;
+  final Color? cardColor;
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: const Color(0xffFAFAFA),
+      color: cardColor,
       elevation: 0,
       child: Center(
         child: ListTile(
           leading: SvgPicture.asset(userModel.icon),
-          title: Text(
-            maxLines: 1,
-            userModel.title,
-            style: Styles.styleSemiBold16,
+          title: FittedBox(
+            alignment: Alignment.centerLeft,
+            fit: BoxFit.scaleDown,
+            child: Text(
+              maxLines: 1,
+              userModel.title,
+              style: Styles.styleSemiBold16(context),
+            ),
           ),
-          subtitle: Text(
-            maxLines: 1,
-            userModel.subtitle,
-            style: Styles.styleRegular12,
+          subtitle: FittedBox(
+            alignment: Alignment.centerLeft,
+            fit: BoxFit.scaleDown,
+            child: Text(
+              maxLines: 1,
+              userModel.subtitle,
+              style: Styles.styleRegular12(context),
+            ),
           ),
         ),
       ),

@@ -2,7 +2,6 @@ import 'package:dashboard/views/widgets/all_expenses_and_quick_invoice.dart';
 import 'package:dashboard/views/widgets/card_and_income_section.dart';
 import 'package:dashboard/views/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class DisktopUiLayout extends StatelessWidget {
   const DisktopUiLayout({super.key});
@@ -13,14 +12,25 @@ class DisktopUiLayout extends StatelessWidget {
       children: [
         Expanded(
           flex: 2,
-          child: CustomDrawer(),
+          child: CustomDrawer(
+            cardColor: Color(0xffFAFAFA),
+            backGroundColor: Colors.white,
+          ),
         ),
         SizedBox(width: 32),
-        Expanded(flex: 4, child: AllExpensesAndQuickInvoiceSection()),
+        Expanded(
+            flex: 4,
+            child: AllExpensesAndQuickInvoiceSection(
+              topPadding: EdgeInsets.only(top: 40),
+            )),
         SizedBox(
           width: 20,
         ),
-        Expanded(flex: 3, child: CardAndIncomeSection()),
+        Expanded(
+            flex: 3,
+            child: CardAndIncomeSection(
+              topPadding: EdgeInsets.only(top: 40),
+            )),
         SizedBox(width: 32),
       ],
     );

@@ -18,6 +18,7 @@ class IncomeDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      physics: const ScrollPhysics(parent: NeverScrollableScrollPhysics()),
       shrinkWrap: true,
       itemCount: detailsList.length,
       itemBuilder: (context, index) {
@@ -45,11 +46,13 @@ class IncomeDetailsItem extends StatelessWidget {
         ),
         title: Text(
           data.title,
-          style: Styles.styleRegular16.copyWith(color: const Color(0xff064061)),
+          style: Styles.styleRegular16(context)
+              .copyWith(color: const Color(0xff064061)),
         ),
         trailing: Text(
           data.percent,
-          style: Styles.styleMedium16.copyWith(color: const Color(0xff208CC8)),
+          style: Styles.styleMedium16(context)
+              .copyWith(color: const Color(0xff208CC8)),
         ),
       ),
     );

@@ -8,15 +8,15 @@ class ItemSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
-        Expanded(
+        const Expanded(
           child: CustomTitleTextfield(
             title: 'Item name',
             hint: 'Type Item name',
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 16,
         ),
         Expanded(
@@ -25,12 +25,12 @@ class ItemSection extends StatelessWidget {
           children: [
             Text(
               'Item mount',
-              style: Styles.styleMedium16,
+              style: Styles.styleMedium16(context),
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
-            CustomDropDownButton(),
+            const CustomDropDownButton(),
           ],
         )),
       ],

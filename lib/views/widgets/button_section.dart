@@ -7,19 +7,19 @@ class ButtonSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
         Expanded(
           child: CustomButton(
             text: 'Add more details',
             color: Colors.white,
-            style: Styles.styleSemiBold18,
+            style: Styles.styleSemiBold18(context),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 24,
         ),
-        Expanded(child: CustomButton(text: 'Send Money'))
+        const Expanded(child: CustomButton(text: 'Send Money'))
       ],
     );
   }

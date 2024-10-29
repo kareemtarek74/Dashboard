@@ -10,31 +10,39 @@ import 'package:flutter/material.dart';
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({
     super.key,
+    required this.backGroundColor,
+    required this.cardColor,
+    this.width,
   });
 
+  final Color? backGroundColor;
+  final Color? cardColor;
+  final double? width;
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
-      child: const CustomScrollView(slivers: [
+      width: width,
+      color: backGroundColor,
+      child: CustomScrollView(slivers: [
         SliverToBoxAdapter(
           child: Padding(
-            padding: EdgeInsets.all(24),
+            padding: const EdgeInsets.all(24),
             child: PersonalInfoListile(
-              userModel: UserInfoModel(
+              cardColor: cardColor,
+              userModel: const UserInfoModel(
                   title: 'Lekan Okeowo',
                   subtitle: 'demo@gmail.com',
                   icon: Assets.assetsImagesPersonalIcon),
             ),
           ),
         ),
-        SliverToBoxAdapter(
+        const SliverToBoxAdapter(
           child: SizedBox(
             height: 8,
           ),
         ),
-        CustomDrawerListView(),
-        SliverFillRemaining(
+        const CustomDrawerListView(),
+        const SliverFillRemaining(
           hasScrollBody: false,
           child: Padding(
             padding: EdgeInsets.all(8),

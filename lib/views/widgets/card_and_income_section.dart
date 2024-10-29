@@ -3,13 +3,14 @@ import 'package:dashboard/views/widgets/income_section.dart';
 import 'package:flutter/material.dart';
 
 class CardAndIncomeSection extends StatelessWidget {
-  const CardAndIncomeSection({super.key});
-
+  const CardAndIncomeSection({super.key, this.topPadding});
+  final EdgeInsetsGeometry? topPadding;
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: 40),
-      child: SingleChildScrollView(
+    return Padding(
+      padding: topPadding ?? EdgeInsets.zero,
+      child: const SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Column(
           children: [
             CardSection(),

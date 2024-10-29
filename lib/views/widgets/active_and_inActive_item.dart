@@ -15,9 +15,13 @@ class InActiveItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.icon),
-      title: Text(
-        drawerItemModel.title,
-        style: Styles.styleRegular16,
+      title: FittedBox(
+        alignment: Alignment.centerLeft,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          drawerItemModel.title,
+          style: Styles.styleRegular16(context),
+        ),
       ),
     );
   }
@@ -35,9 +39,13 @@ class ActiveItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.icon),
-      title: Text(
-        drawerItemModel.title,
-        style: Styles.styleBold16,
+      title: FittedBox(
+        alignment: Alignment.centerLeft,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          drawerItemModel.title,
+          style: Styles.styleBold16(context),
+        ),
       ),
       trailing: Container(
         width: 3.27,

@@ -9,8 +9,8 @@ class CustomTextfield extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
         hintText: (hintText),
-        hintStyle:
-            Styles.styleRegular16.copyWith(color: const Color(0xffAAAAAA)),
+        hintStyle: Styles.styleRegular16(context)
+            .copyWith(color: const Color(0xffAAAAAA)),
         filled: true,
         fillColor: const Color(0xffFAFAFA),
         focusColor: const Color(0xffFAFAFA),

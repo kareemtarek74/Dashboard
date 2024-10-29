@@ -15,22 +15,22 @@ class CardSection extends StatelessWidget {
             color: Colors.white,
             borderRadius: BorderRadius.circular(12),
           ),
-          child: const Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'My card',
-                style: Styles.styleSemiBold20,
+                style: Styles.styleSemiBold20(context),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              MyCardSection(),
-              Divider(
+              const MyCardSection(),
+              const Divider(
                 height: 40,
                 color: Color(0xffF1F1F1),
               ),
-              TransactionHistorySection()
+              const TransactionHistorySection()
             ],
           )),
     );

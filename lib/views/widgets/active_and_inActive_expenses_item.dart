@@ -37,23 +37,35 @@ class InActiveAllExpensesItem extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                itemModel.title,
-                style: Styles.styleSemiBold16,
+              FittedBox(
+                alignment: Alignment.centerLeft,
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  itemModel.title,
+                  style: Styles.styleSemiBold16(context),
+                ),
               ),
               const SizedBox(
                 height: 8,
               ),
-              Text(
-                itemModel.subtitle,
-                style: Styles.styleRegular14,
+              FittedBox(
+                alignment: Alignment.centerLeft,
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  itemModel.subtitle,
+                  style: Styles.styleRegular14(context),
+                ),
               ),
               const SizedBox(
                 height: 16,
               ),
-              Text(
-                itemModel.price,
-                style: Styles.styleSemiBold24,
+              FittedBox(
+                alignment: Alignment.centerLeft,
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  itemModel.price,
+                  style: Styles.styleSemiBold24(context),
+                ),
               )
             ],
           )
@@ -96,22 +108,36 @@ class ActiveAllExpensesItem extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(itemModel.title,
-                  style: Styles.styleSemiBold16.copyWith(color: Colors.white)),
+              FittedBox(
+                alignment: Alignment.centerLeft,
+                fit: BoxFit.scaleDown,
+                child: Text(itemModel.title,
+                    style: Styles.styleSemiBold16(context)
+                        .copyWith(color: Colors.white)),
+              ),
               const SizedBox(
                 height: 8,
               ),
-              Text(
-                itemModel.subtitle,
-                style: Styles.styleRegular14
-                    .copyWith(color: const Color(0xffFAFAFA)),
+              FittedBox(
+                alignment: Alignment.centerLeft,
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  itemModel.subtitle,
+                  style: Styles.styleRegular14(context)
+                      .copyWith(color: const Color(0xffFAFAFA)),
+                ),
               ),
               const SizedBox(
                 height: 16,
               ),
-              Text(
-                itemModel.price,
-                style: Styles.styleSemiBold24.copyWith(color: Colors.white),
+              FittedBox(
+                alignment: Alignment.centerLeft,
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  itemModel.price,
+                  style: Styles.styleSemiBold24(context)
+                      .copyWith(color: Colors.white),
+                ),
               )
             ],
           )

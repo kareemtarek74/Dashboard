@@ -13,7 +13,7 @@ class CustomTitleTextfield extends StatelessWidget {
       children: [
         Text(
           title,
-          style: Styles.styleMedium16,
+          style: Styles.styleMedium16(context),
         ),
         const SizedBox(
           height: 12,
